@@ -1,0 +1,14 @@
+version: "1.0"
+networks:
+  dev:
+    external: true
+services:
+  demo:
+    image: express.ts
+    ports:
+      - 5000:80
+    networks:
+      - dev
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.dev-docker.rule=Host(`app.local`) && (Path(`/api/fruits`)) 
