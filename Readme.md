@@ -2,3 +2,4 @@
 This is training project.
 
 web
+vs code
